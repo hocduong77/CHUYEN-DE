@@ -1,0 +1,11 @@
+c:\users\binhhoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\bin\Debug\CHUYENDE.exe
+c:\users\binhhoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\bin\Debug\CHUYENDE.pdb
+c:\users\binhhoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.login.resources
+c:\users\binhhoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.Properties.Resources.resources
+c:\users\binhhoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.csproj.GenerateResource.Cache
+c:\users\binhhoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.exe
+c:\users\binhhoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.pdb
+C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.F_AddSV.resources
+C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.CheckRole.resources
+C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.csprojResolveAssemblyReference.cache
+C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.themlop.resources
