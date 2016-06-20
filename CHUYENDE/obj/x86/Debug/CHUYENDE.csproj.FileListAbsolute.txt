@@ -9,3 +9,4 @@ C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86
 C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.CheckRole.resources
 C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.csprojResolveAssemblyReference.cache
 C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.themlop.resources
+C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.themSV.resources

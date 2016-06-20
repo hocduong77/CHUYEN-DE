@@ -52,7 +52,7 @@ namespace CHUYENDE
             this.dsSV.SelectedIndexChanged +=
            new System.EventHandler(ComboBoxSV_SelectedIndexChanged);
         }
-
+       
         private void getListSV(string malop){
             dsSV.Items.Clear();
             listSV.Clear();
@@ -115,6 +115,9 @@ namespace CHUYENDE
 
         private void addsv_Click(object sender, EventArgs e)
         {
+            themSV adddSV = new themSV();
+            adddSV.ShowDialog(this);
+
             /*
             String strLenh = "TAO_LOGIN '" + loginName.Text + "','" + pass.Text + "','" + masv.Text + "','" + "SINHVIEN" + "'";
             try
@@ -233,11 +236,126 @@ namespace CHUYENDE
             Program.myreader.Close();
         }
 
+
         private void phSV_Click(object sender, EventArgs e)
         {
             int index = dsSV.SelectedIndex;
             // Console.WriteLine("index" + index);
             SinhVien sinhvien = displaySV(index);   
+        }
+        private string[] Headers = { "MSV", "Họ", "Tên", "Phái", "Ngày sinh", "Nơi sinh", "Dịa chỉ", "Ghi chú" };
+        private string[,] Data =
+        {
+    {"Alice Archer", "1276 Ash Ave", "Ann Arbor", "MI", "12893"},
+    {"Bill Blaze", "26157 Beach Blvd", "Boron", "CA", "23617"},
+    {"Cindy Carruthers", "352 Cherry Ct", "Chicago", "IL", "35271"},
+    {"Dean Dent", "4526 Deerfield Dr", "Denver", "CO", "47848"},
+        };
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            using (Font header_font = new Font("Times New Roman",
+        16, FontStyle.Bold))
+            {
+                using (Font body_font = new Font("Times New Roman", 12))
+                {
+                    // We'll skip this much space between rows.
+                    int line_spacing = 20;
+                    
+                    // See how wide the columns must be.
+                    //int[] column_widths = new int[]  { 153,  153, 100, 76, 68};
+                    int[] column_widths = new int[] { 76, 100, 76, 76, 120, 100, 100, 100 };
+                    // Start at the left margin.
+                    int x = 20;
+
+                    // Print by columns.
+                    for (int col = 0; col < Headers.Length; col++)
+                    {
+                       
+                        // Print the header.
+                        int y = e.MarginBounds.Top;
+                        e.Graphics.DrawString(Headers[col],
+                            header_font, Brushes.Blue, x, y);
+                        y += (int)(line_spacing * 1.5);
+
+                        // Print the items in the column.
+                        for (int row = 0; row <
+                            listSV.Count; row++)
+                        {
+                            SinhVien sinhvien = (SinhVien)listSV[row];
+                            if (col == 0)
+                            {
+                                Console.WriteLine("sinhvien.MASV" + sinhvien.MASV);
+                                e.Graphics.DrawString(sinhvien.MASV,
+                               body_font, Brushes.Black, x, y);
+                            }
+                            else if (col == 1)
+                            {
+                                e.Graphics.DrawString(sinhvien.HO,
+                                  body_font, Brushes.Black, x, y);
+                            }
+                            else if (col == 2)
+                            {
+                                e.Graphics.DrawString(sinhvien.TEN,
+                                  body_font, Brushes.Black, x, y);
+                            }
+                            else if (col == 3)
+                            {
+                                if (sinhvien.PHAI == true)
+                                {
+                                    e.Graphics.DrawString("Nam",
+                                      body_font, Brushes.Black, x, y);
+                                }
+                                else {
+                                    e.Graphics.DrawString("Nữ",
+                                        body_font, Brushes.Black, x, y);
+                                }
+                            }
+                            else if (col == 4)
+                            {
+                                e.Graphics.DrawString(sinhvien.NGAYSINH,
+                                  body_font, Brushes.Black, x, y);
+                            }
+                            else if (col == 5)
+                            {
+                                e.Graphics.DrawString(sinhvien.NOISINH,
+                                  body_font, Brushes.Black, x, y);
+                            }
+                            else if (col == 6)
+                            {
+                                e.Graphics.DrawString(sinhvien.DIACHI,
+                                  body_font, Brushes.Black, x, y);
+                            }
+                            else if (col == 6)
+                            {
+                                e.Graphics.DrawString(sinhvien.GHICHU,
+                                  body_font, Brushes.Black, x, y);
+                            }
+                            y += line_spacing;
+                        }
+
+                        // Move to the next column.
+                        x += column_widths[col];
+                    } // Looping over columns
+                } // using body_font
+            } // using header_font
+
+         
+            e.HasMorePages = false;
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+            
+        }
+
+        private void In_Click(object sender, EventArgs e)
+        {
+            printDialog1.Document = printDocument1;
+            if (printDialog1.ShowDialog() == DialogResult.OK) {
+                printDocument1.Print();
+            }
         }
         
     }
