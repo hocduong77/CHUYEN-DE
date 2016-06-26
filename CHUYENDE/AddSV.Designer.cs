@@ -71,7 +71,7 @@
             this.addsv.Name = "addsv";
             this.addsv.Size = new System.Drawing.Size(75, 23);
             this.addsv.TabIndex = 8;
-            this.addsv.Text = "Them";
+            this.addsv.Text = "Thêm";
             this.addsv.UseVisualStyleBackColor = true;
             this.addsv.Click += new System.EventHandler(this.addsv_Click);
             // 
@@ -82,7 +82,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Ma SV";
+            this.label5.Text = "Mã SV";
             // 
             // label6
             // 
@@ -91,7 +91,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Ma Lop";
+            this.label6.Text = "Mã Lớp";
             // 
             // label7
             // 
@@ -100,7 +100,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 13);
             this.label7.TabIndex = 11;
-            this.label7.Text = "Ho va Ten";
+            this.label7.Text = "Họ va Tên";
             // 
             // label9
             // 
@@ -109,7 +109,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(113, 13);
             this.label9.TabIndex = 13;
-            this.label9.Text = "Ngay Sinh (mm/dd/yy)";
+            this.label9.Text = "Ngày Sinh (mm/dd/yy)";
             // 
             // label10
             // 
@@ -118,25 +118,25 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 13);
             this.label10.TabIndex = 14;
-            this.label10.Text = "Noi Sinh";
+            this.label10.Text = "Nơi Sinh";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(358, 246);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.Size = new System.Drawing.Size(40, 13);
             this.label11.TabIndex = 15;
-            this.label11.Text = "Dia Chi";
+            this.label11.Text = "Địa chỉ";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(354, 294);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 13);
+            this.label13.Size = new System.Drawing.Size(44, 13);
             this.label13.TabIndex = 17;
-            this.label13.Text = "Ghi Chu";
+            this.label13.Text = "Ghi chú";
             // 
             // malop
             // 
@@ -187,7 +187,7 @@
             this.phai.Name = "phai";
             this.phai.Size = new System.Drawing.Size(47, 17);
             this.phai.TabIndex = 25;
-            this.phai.Text = "Phai";
+            this.phai.Text = "Phái";
             this.phai.UseVisualStyleBackColor = true;
             // 
             // noisinh
@@ -204,7 +204,7 @@
             this.nghihoc.Name = "nghihoc";
             this.nghihoc.Size = new System.Drawing.Size(71, 17);
             this.nghihoc.TabIndex = 27;
-            this.nghihoc.Text = "Nghi Hoc";
+            this.nghihoc.Text = "Nghỉ Học";
             this.nghihoc.UseVisualStyleBackColor = true;
             // 
             // label3
@@ -214,16 +214,16 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 28;
-            this.label3.Text = "Ma Lop";
+            this.label3.Text = "Mã Lớp";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(588, 39);
+            this.label4.Location = new System.Drawing.Point(623, 39);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 29;
-            this.label4.Text = "Ten Lop";
+            this.label4.Text = "Tên Lớp";
             // 
             // tenlop
             // 
@@ -238,7 +238,7 @@
             this.themLop.Name = "themLop";
             this.themLop.Size = new System.Drawing.Size(75, 23);
             this.themLop.TabIndex = 31;
-            this.themLop.Text = "Them";
+            this.themLop.Text = "Thêm";
             this.themLop.UseVisualStyleBackColor = true;
             this.themLop.Click += new System.EventHandler(this.themLop_Click);
             // 
@@ -248,7 +248,7 @@
             this.xoaLop.Name = "xoaLop";
             this.xoaLop.Size = new System.Drawing.Size(75, 23);
             this.xoaLop.TabIndex = 32;
-            this.xoaLop.Text = "Xoa";
+            this.xoaLop.Text = "Xóa";
             this.xoaLop.UseVisualStyleBackColor = true;
             this.xoaLop.Click += new System.EventHandler(this.xoaLop_Click);
             // 
@@ -268,7 +268,7 @@
             this.phLop.Name = "phLop";
             this.phLop.Size = new System.Drawing.Size(75, 23);
             this.phLop.TabIndex = 34;
-            this.phLop.Text = "Phuc Hoi";
+            this.phLop.Text = "Phục Hồi";
             this.phLop.UseVisualStyleBackColor = true;
             this.phLop.Click += new System.EventHandler(this.phLop_Click);
             // 
@@ -286,7 +286,7 @@
             this.xoaSV.Name = "xoaSV";
             this.xoaSV.Size = new System.Drawing.Size(75, 23);
             this.xoaSV.TabIndex = 38;
-            this.xoaSV.Text = "Xoa";
+            this.xoaSV.Text = "Xóa";
             this.xoaSV.UseVisualStyleBackColor = true;
             this.xoaSV.Click += new System.EventHandler(this.xoaSV_Click);
             // 
@@ -296,7 +296,7 @@
             this.phSV.Name = "phSV";
             this.phSV.Size = new System.Drawing.Size(75, 23);
             this.phSV.TabIndex = 39;
-            this.phSV.Text = "Phuc Hoi";
+            this.phSV.Text = "Phục Hồi";
             this.phSV.UseVisualStyleBackColor = true;
             this.phSV.Click += new System.EventHandler(this.phSV_Click);
             // 

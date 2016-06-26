@@ -22,10 +22,17 @@ namespace CHUYENDE
         private void F_AddSV_Load(object sender, System.EventArgs e)
         {
             
-
+           
+            //dsSV.SelectedIndex =0;
+            Getlop();
+            this.dsSV.SelectedIndexChanged +=
+           new System.EventHandler(ComboBoxSV_SelectedIndexChanged);
+        }
+        public void Getlop() {
             String strLenh = "DS_LOP ";
             Program.myreader = Program.execSqlDataReader(strLenh, Program.connsrt);
-            while (Program.myreader.Read()) {             
+            while (Program.myreader.Read())
+            {
                 Lop lop = new Lop();
                 lop.maLop = Program.myreader.GetString(0);
                 lop.TenLop = Program.myreader.GetString(1);
@@ -35,7 +42,7 @@ namespace CHUYENDE
             Program.myreader.Close();
             foreach (Lop lop in listLop)
             {
-                dslop.Items.Add(lop.maLop);               
+                dslop.Items.Add(lop.maLop);
             }
             dslop.SelectedIndex = 0;
             Lop lop1 = (Lop)listLop[0];
@@ -45,14 +52,9 @@ namespace CHUYENDE
             getListSV(lop1.maLop);
             foreach (SinhVien sinhvien in listSV)
             {
-                dsSV.Items.Add(sinhvien.MASV);               
+                dsSV.Items.Add(sinhvien.MASV);
             }
-           
-            //dsSV.SelectedIndex =0;
-            this.dsSV.SelectedIndexChanged +=
-           new System.EventHandler(ComboBoxSV_SelectedIndexChanged);
         }
-       
         private void getListSV(string malop){
             dsSV.Items.Clear();
             listSV.Clear();
@@ -93,6 +95,7 @@ namespace CHUYENDE
         private void ComboBoxSV_SelectedIndexChanged(object sender,
         System.EventArgs e)
         {
+            Getlop();
             int index = dsSV.SelectedIndex;
             // Console.WriteLine("index" + index);
             SinhVien sinhvien = displaySV(index);           
@@ -117,43 +120,19 @@ namespace CHUYENDE
         {
             themSV adddSV = new themSV();
             adddSV.ShowDialog(this);
-
-            /*
-            String strLenh = "TAO_LOGIN '" + loginName.Text + "','" + pass.Text + "','" + masv.Text + "','" + "SINHVIEN" + "'";
-            try
-            {
-                Program.myreader = Program.execSqlDataReader(strLenh, Program.connsrt);
-            }
-            catch (InvalidOperationException ex)
-            {
-                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK);
-                return;
-            }
-            Program.myreader.Close();
-            int isphai = 0;
-            if (phai.Checked) {
-                isphai = 1;
-            }
-            int isnghihoc = 0;
-            if (nghihoc.Checked)
-            {
-                isnghihoc = 1;
-            }
-            // strLenh = "INSERT INTO SINHVIEN (MASV, HO, TEN, MALOP, PHAI, NGAYSINH, NOISINH, DIACHI, GHICHU, NGHIHOC) VALUES(" + masv.Text + ",'" + hosv.Text + "','" + tensv.Text + "','" + malop.Text + "',"+isphai+",'" + ngaysinh.Text + "','" + noisinh.Text
-           //     + "','" + diachi.Text + "','" + ghichu.Text + "', 0)" ;
-            strLenh = "ADD_SV '" + masv.Text + "','" + hosv.Text + "','" + tensv.Text + "','" + malop.Text + "',"+isphai+",'" + ngaysinh.Text + "','" + noisinh.Text
-                + "','" + diachi.Text + "','" + ghichu.Text + "'," + isnghihoc ;
-            Program.myreader = Program.execSqlDataReader(strLenh, Program.connsrt);
-            MessageBox.Show("insert thanh cong ");
-            Program.myreader.Close();
-             */
+        
         }
 
         private void themLop_Click(object sender, EventArgs e)
         {
             themlop adddLop = new themlop();
-            adddLop.ShowDialog(this);
+            
+            adddLop.ShowDialog(this);      
+            
         }
+
+       
+
 
         private void ghiLop_Click(object sender, EventArgs e)
         {            
@@ -244,13 +223,6 @@ namespace CHUYENDE
             SinhVien sinhvien = displaySV(index);   
         }
         private string[] Headers = { "MSV", "Họ", "Tên", "Phái", "Ngày sinh", "Nơi sinh", "Dịa chỉ", "Ghi chú" };
-        private string[,] Data =
-        {
-    {"Alice Archer", "1276 Ash Ave", "Ann Arbor", "MI", "12893"},
-    {"Bill Blaze", "26157 Beach Blvd", "Boron", "CA", "23617"},
-    {"Cindy Carruthers", "352 Cherry Ct", "Chicago", "IL", "35271"},
-    {"Dean Dent", "4526 Deerfield Dr", "Denver", "CO", "47848"},
-        };
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             using (Font header_font = new Font("Times New Roman",

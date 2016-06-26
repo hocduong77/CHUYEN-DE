@@ -89,26 +89,50 @@ namespace CHUYENDE
                 MessageBox.Show("error define user role", "", MessageBoxButtons.OK);
             }
             Program.myreader.Close();
-
-            // get ho ten frome username
-            strLenh = "Select HO +' '+ TEN as HoTen from SINHVIEN where MASV = " + Program.username;
-            Program.myreader = Program.execSqlDataReader(strLenh, Program.connsrt);
-            if (Program.myreader.HasRows)
+            if (Program.mGroup == "GIANGVIEN")
             {
-                Program.myreader.Read();
-                Program.mHoten = Program.myreader.GetString(0);
-            }
-            else { 
-            MessageBox.Show("loginname not link to sinhvien","", MessageBoxButtons.OK);
-            Program.myreader.Close();
-            Program.conn.Close();
-            return;
+                // get ho ten frome username
+                strLenh = "Select HO +' '+ TEN as HoTen from GIANGVIEN where MAGV = " + Program.username;
+                Program.myreader = Program.execSqlDataReader(strLenh, Program.connsrt);
+                if (Program.myreader.HasRows)
+                {
+                    Program.myreader.Read();
+                    Program.mHoten = Program.myreader.GetString(0);
+                }
+                else
+                {
+                    MessageBox.Show("loginname not link to GIANGVIEN", "", MessageBoxButtons.OK);
+                    Program.myreader.Close();
+                    Program.conn.Close();
+                    return;
+                }
             }
 
-            Program.myreader.Close();
-           // Program.conn.Close();
-            tensv = "ho ten sv " + Program.mHoten;
-            nhom = "nhom " + Program.mGroup;
+            if (Program.mGroup == "SINHVIEN")
+            {
+                // get ho ten frome username
+                strLenh = "Select HO +' '+ TEN as HoTen from SINHVIEN where MASV = " + Program.username;
+                Program.myreader = Program.execSqlDataReader(strLenh, Program.connsrt);
+                if (Program.myreader.HasRows)
+                {
+                    Program.myreader.Read();
+                    Program.mHoten = Program.myreader.GetString(0);
+                }
+                else
+                {
+                    MessageBox.Show("loginname not link to sinhvien", "", MessageBoxButtons.OK);
+                    Program.myreader.Close();
+                    Program.conn.Close();
+                    return;
+                }
+
+                Program.myreader.Close();
+                // Program.conn.Close();
+                //tensv = "ho ten sv " + Program.mHoten;
+                //nhom = "nhom " + Program.mGroup;
+            }
+
+            
             CheckRole f1 = new CheckRole();
             f1.Show();
             this.Hide();

@@ -10,3 +10,5 @@ C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86
 C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.csprojResolveAssemblyReference.cache
 C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.themlop.resources
 C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.themSV.resources
+C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.themGV.resources
+C:\Users\BinhHoc\documents\visual studio 2010\Projects\CHUYENDE\CHUYENDE\obj\x86\Debug\CHUYENDE.Backup_Restore.resources

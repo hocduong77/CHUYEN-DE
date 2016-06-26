@@ -64,8 +64,27 @@ namespace CHUYENDE
                 myreader = sqlcmd.ExecuteReader();
                 return myreader;
             }
-            catch (Exception ex) {
-                MessageBox.Show("error access database QL_SINHVIEN " + ex.Message);
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                //2627
+                if (ex.Number == 2627)
+                {
+                 
+                    MessageBox.Show("MÃ BỊ TRÙNG ! ");
+                }
+                else if (ex.Number == 15025)
+                {
+                    //MessageBox.Show(ex.Message.ToString() + ex.Number.ToString());
+                    //MessageBox.Show("MÃ SINH VIÊN BỊ TRÙNG ! ");
+                }
+                else if (ex.Number == 547){
+                    MessageBox.Show("LỚP KHÔNG TỒN TẠI ! ");  
+                }
+                else if (ex.Number == 8114)
+                {
+                    MessageBox.Show("NGÀY THÁNG KHÔNG HỢP LỆ MM/DD/YY ! ");  
+                    //MessageBox.Show(ex.Message.ToString() + ex.Number.ToString());
+                }
 
                 Program.conn.Close();
                 return null;
@@ -102,6 +121,7 @@ namespace CHUYENDE
             }
             catch (SqlException ex)
             {
+                MessageBox.Show(ex.Message.ToString());  
                 conn.Close();
                 return 0;
             }  

@@ -26,10 +26,18 @@ namespace CHUYENDE
             {
                 message.Text = "XIN CHAO QUAN LY " ;
                 addsv.Visible = true;
+                addGV.Visible = true;
+                backup.Visible = true;
+            }
+            else if (Program.mGroup == "GIANGVIEN")
+            {
+                message.Text = "XIN CHAO GIANG VIEN ";
+                //addsv.Visible = true;
             }
             else {
                 message.Text = "XIN CHAO SINH VIEN " ;
                 addsv.Visible = false;
+                addGV.Visible = false;
             }
         }
 
@@ -37,6 +45,25 @@ namespace CHUYENDE
         {
             F_AddSV addsv = new F_AddSV();
             addsv.Show();
+            this.Hide();
+        }
+
+        private void CheckRole_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void addGV_Click(object sender, EventArgs e)
+        {
+            themGV addgv = new themGV();
+            addgv.Show();
+            this.Hide();
+        }
+
+        private void backup_Click(object sender, EventArgs e)
+        {
+            Backup_Restore form = new Backup_Restore();
+            form.Show();
             this.Hide();
         }
     }

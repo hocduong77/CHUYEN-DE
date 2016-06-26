@@ -43,16 +43,16 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ma Lop";
+            this.label1.Text = "Mã Lớp";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(21, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Ten lop";
+            this.label2.Text = "Tên Lớp";
             // 
             // malop
             // 
@@ -74,7 +74,7 @@
             this.luu.Name = "luu";
             this.luu.Size = new System.Drawing.Size(75, 23);
             this.luu.TabIndex = 4;
-            this.luu.Text = "Luu";
+            this.luu.Text = "Lưu";
             this.luu.UseVisualStyleBackColor = true;
             this.luu.Click += new System.EventHandler(this.luu_Click);
             // 
@@ -84,7 +84,7 @@
             this.huy.Name = "huy";
             this.huy.Size = new System.Drawing.Size(75, 23);
             this.huy.TabIndex = 5;
-            this.huy.Text = "Huy";
+            this.huy.Text = "Huỷ";
             this.huy.UseVisualStyleBackColor = true;
             this.huy.Click += new System.EventHandler(this.huy_Click);
             // 

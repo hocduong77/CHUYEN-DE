@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
 namespace CHUYENDE
 {
     public partial class themlop : Form
@@ -29,13 +28,19 @@ namespace CHUYENDE
             {
                 Program.myreader = Program.execSqlDataReader(strLenh, Program.connsrt);
             }
-            catch (InvalidOperationException ex)
-            {
-                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK);
+            catch (System.Data.SqlClient.SqlException exception)
+            {  
+                MessageBox.Show(exception.Number.ToString(), "", MessageBoxButtons.OK);
                 return;
             }
-            Program.myreader.Close();
-            MessageBox.Show("them lop thanh cong", "", MessageBoxButtons.OK);
+            if (null !=Program.myreader)
+            {
+                Program.myreader.Close();
+                MessageBox.Show("them lop thanh cong", "", MessageBoxButtons.OK);
+            }
+            //Parent.Refresh();
+            //F_AddSV.Getlop();
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }

@@ -34,7 +34,10 @@ namespace CHUYENDE
                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK);
                return;
            }
-           Program.myreader.Close();
+           if (null != Program.myreader)
+           {
+               Program.myreader.Close();
+           }
            int isphai = 0;
            if (phai.Checked) {
                isphai = 1;
@@ -48,8 +51,12 @@ namespace CHUYENDE
            strLenh = "ADD_SV '" + masv.Text + "','" + ho.Text + "','" + ten.Text + "','" + malop.Text + "',"+isphai+",'" + ngaysinh.Text + "','" + noisinh.Text
                + "','" + diachi.Text + "','" + ghichu.Text + "'," + isnghihoc ;
            Program.myreader = Program.execSqlDataReader(strLenh, Program.connsrt);
-           MessageBox.Show("insert thanh cong ");
-           Program.myreader.Close();
+           if (null != Program.myreader)
+           {
+               Program.myreader.Close();
+               MessageBox.Show("thêm sinh viên thành công", "", MessageBoxButtons.OK);
+           }
+          
             
         }
     }
